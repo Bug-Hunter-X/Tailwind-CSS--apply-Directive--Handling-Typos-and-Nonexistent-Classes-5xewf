@@ -1,0 +1,9 @@
+This bug occurs when using Tailwind CSS's `@apply` directive with a class that doesn't exist or has a typo.  This can lead to unexpected styling issues or even cause the build process to fail, depending on how strict your build setup is.
+
+```html
+<div class="bg-red-500 @apply text-white">
+  This text should be white on a red background.
+</div>
+```
+
+If `text-white` is mistyped (e.g., `text-wite`), Tailwind won't apply the styling, and the text will likely inherit its color from the parent element or the browser default.
